@@ -5,8 +5,6 @@
     Theme name: Apaxy
     Theme author: @adamwhitcroft
 \*------------------------------------*/
-@import url('//fonts.googleapis.com/css?family=Open+Sans');
-/* Have to use @import for the font, as you can only specify a single stylesheet */
 * {
 	margin:0;
 	padding:0;
@@ -67,12 +65,15 @@ table {
 	width:100%;
 	border-collapse:collapse;
 	font-size:.875em;
+    table-layout:fixed;
 }
 tr {
 	outline:0;
 	border:0;
+    display:block;
+    float: left;
 }
-tr:hover td {
+tr:hover {
 	background:#f6f6f6;
 }
 th {
@@ -91,17 +92,24 @@ th + th + th {
 th + th + th + th {
 	width:5%;
 }
-tr td:first-of-type {
+tr td {
+	padding-left:5px;
+	padding-right:5px;
+}
+.indexcolicon {
 	padding-left:10px;
+}
+.indexcolname {
 	padding-right:10px;
 }
 td {
 	padding:5px 0;
 	outline:0;
 	border:0;
-	border-bottom:1px solid #edf1f5;
+	/* border-bottom:1px solid #edf1f5; */
 	vertical-align:middle;
 	text-align:left;
+    display:inline-block;
 	-webkit-transition:background 300ms ease;
 	   -moz-transition:background 300ms ease;
 	    -ms-transition:background 300ms ease;
@@ -117,6 +125,11 @@ tr.parent a[href^="/"] {
 	.parent a[href^="/"]:hover {
 		color:#2281d0;
 	}
+tr.indexhead,
+td.indexcollastmod,
+td.indexcolsize {
+    display: none;
+}
 /*------------------------------------*\
     Footer
 \*------------------------------------*/
