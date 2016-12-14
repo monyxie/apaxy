@@ -104,23 +104,57 @@ tr {
     min-height:10rem;
     position:relative;
     overflow:hidden;
+    z-index: 1;
 }
+tr .indexcolname::after {
+    color: #888;
+    opacity: .5;
+    content: '❔';
+    display: block;
+    font-size: 5rem;
+    /* line-height: 1; */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+
 tr.parent {
     background-color: #cc0;
     /* border-radius: 0 0 100% 50%; */
 }
+tr.parent .indexcolname::after {
+    content: '⮨';
+}
 tr.dir {
     background-color: #ee0;
+}
+tr.dir .indexcolname::after {
+    content: '📂';
 }
 tr.image {
     background-color: #00CA01;
 }
+tr.image .indexcolname::after {
+    content: '🖼';
+}
 tr.audio {
     background-color: #62E6FF;
 }
-tr.video {
-    background-color: #FF6C9D;
+tr.audio .indexcolname::after {
+    content: '𝄞';
 }
+tr.video {
+    background-color: #FF8C8D;
+}
+tr.video .indexcolname::after {
+    content: '🎞';
+}
+tr.text .indexcolname::after {
+    content: '🗎';
+}
+
 tr:hover {
 	background:#555;
     box-shadow: 0 0 10px #666;
@@ -128,26 +162,14 @@ tr:hover {
 tr:hover a {
     color:#eee;
 }
+
+
 th {
 	text-align:left;
 	font-size:.75em;
 	padding-right:20px;
 }
-/* 2nd Column: Filename */
-th + th {
-	width:65%;
-}
-/* 3rd Column: Last Modified */
-th + th + th {
-}
-/* 4th Column: Size */
-th + th + th + th {
-	width:5%;
-}
-tr td {
-	/* padding-left:5px; */
-	/* padding-right:5px; */
-}
+
 .indexcolicon img {
     width: 1em;
     height: 1em;
@@ -178,6 +200,7 @@ td {
 }
 td a{
 	display: block;
+    z-index: 100;
 }
 tr.indexhead,
 td.indexcolicon,
