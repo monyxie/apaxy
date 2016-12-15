@@ -37,7 +37,7 @@ html {
 }
 body {
 	padding:1rem;
-    background-color: black;
+    background-color: #2E3436;
 	-webkit-backface-visibility:hidden;
 }
 code {
@@ -105,54 +105,57 @@ tr {
     position:relative;
     overflow:hidden;
     z-index: 1;
+    border-radius: 0rem 0rem 1.8rem 0rem;
 }
 tr .indexcolname::after {
-    color: #888;
+    color: #000;
     opacity: .5;
     content: '❔';
     display: block;
-    font-size: 5rem;
+    font-size: 6rem;
     /* line-height: 1; */
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: .3rem;
+    right: .3rem;
     z-index: -1;
+    text-shadow: 2px 2px 0px #aaa;
 }
 
 
 tr.parent {
-    background-color: #cc0;
-    /* border-radius: 0 0 100% 50%; */
+    background-color: #D3D7CF;
+    border-radius: 0;
 }
 tr.parent .indexcolname::after {
-    content: '⮨';
+    content: '↩';
 }
 tr.dir {
-    background-color: #ee0;
+    background-color: #EDD400;
+    border-radius: 0;
 }
 tr.dir .indexcolname::after {
     content: '📂';
 }
 tr.image {
-    background-color: #00CA01;
+    background-color: #8AE234;
 }
 tr.image .indexcolname::after {
     content: '🖼';
 }
 tr.audio {
-    background-color: #62E6FF;
+    background-color: #729FCF;
 }
 tr.audio .indexcolname::after {
-    content: '𝄞';
+    content: '🎵';
 }
 tr.video {
-    background-color: #FF8C8D;
+    background-color: #F57900;
 }
 tr.video .indexcolname::after {
-    content: '🎞';
+    content: '▶';
 }
 tr.text .indexcolname::after {
-    content: '🗎';
+    content: '✎';
 }
 
 tr:hover {
@@ -183,6 +186,7 @@ th {
     display:block;
     padding:.2em .2em;
     min-height: 10rem;
+    text-shadow: 0px 0px 2px #fff;
 }
 td {
 	/* padding:.8em 0; */
@@ -213,5 +217,8 @@ td.indexcolsize {
 \*------------------------------------*/
 .footer {
 	text-align:center;
-	font-size:.75rem;
+	font-size:1.0rem;
+}
+.footer a {
+    color: #EEEEEC;
 }
