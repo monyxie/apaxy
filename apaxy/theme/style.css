@@ -149,7 +149,7 @@ tr.audio .indexcolname::after {
     content: '🎵';
 }
 tr.video {
-    background-color: #F57900;
+    background-color: #FCAF3E;
 }
 tr.video .indexcolname::after {
     content: '▶';
